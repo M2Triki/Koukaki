@@ -58,18 +58,14 @@
  }
 
  .studio h2::after {
-    height: 109px;
+    height: 105px!important;
  }
 
- /*
+
  .banner {
-    &__img {
-        animation: animationHautLanding 1s ease-in-out forwards;
-    }
- }
- */ 
 
- .banner img {
-    animation: animationHautLanding 1s ease-in-out;
+   & img {
+      animation: animationBasLanding 1s ease-in-out;
+   }
  }
  
