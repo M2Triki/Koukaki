@@ -42,7 +42,7 @@
 
 
 
- .story__article::after, .story h2::after, .site-footer::before {
+ .story__article::after, .story h2::after, .site-footer::before, #studio h2::before {
     animation-name: rotationFleurs;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -54,11 +54,11 @@
  }
 
  footer#colophon.site-footer::before {
-    height: 155px!important;
+    height: 155px;
  }
 
- .studio h2::after {
-    height: 105px!important;
+ #studio h2::after {
+    height: 109px!important;
  }
 
 

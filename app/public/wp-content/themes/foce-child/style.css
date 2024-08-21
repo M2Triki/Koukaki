@@ -37,7 +37,7 @@
     transform: rotate(360deg);
   }
 }
-.story__article::after, .story h2::after, .site-footer::before {
+.story__article::after, .story h2::after, .site-footer::before, #studio h2::before, #studio h2::after, .site-footer::after {
   animation-name: rotationFleurs;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -48,12 +48,16 @@
   height: 155px;
 }
 
-footer#colophon.site-footer::before {
-  height: 155px !important;
+.site-footer::after {
+  height: 173px;
 }
 
-.studio h2::after {
-  height: 105px !important;
+footer#colophon.site-footer::before {
+  height: 155px;
+}
+
+#studio h2::after {
+  height: 109px !important;
 }
 
 .banner img {
