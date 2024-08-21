@@ -11,18 +11,22 @@
 /***** KEYFRAMES Animations *****/
  @keyframes animationBasLanding {
     0% {
+        opacity: 0;
         transform: translateY(20px);
     }
     100% {
+        opacity: 1;
         transform: translateY(0px);
     }
  }
 
  @keyframes animationHautLanding {
     0% {
+        opacity: 0;
         transform: translateY(0px);
     }
     100% {
+        opacity: 1;
         transform: translateY(20px);
     }
  }
@@ -38,7 +42,7 @@
 
 
 
- .story__article::after, .story h2::after {
+ .story__article::after, .story h2::after, .site-footer::before {
     animation-name: rotationFleurs;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -48,5 +52,24 @@
  .story h2::after {
     height: 155px;
  }
- 
+
+ footer#colophon.site-footer::before {
+    height: 155px!important;
+ }
+
+ .studio h2::after {
+    height: 109px;
+ }
+
+ /*
+ .banner {
+    &__img {
+        animation: animationHautLanding 1s ease-in-out forwards;
+    }
+ }
+ */ 
+
+ .banner img {
+    animation: animationHautLanding 1s ease-in-out;
+ }
  
