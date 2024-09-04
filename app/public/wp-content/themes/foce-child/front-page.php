@@ -5,12 +5,13 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
-            <video autoplay muted loop class="background-video">
+            <video autoplay muted loop poster="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?>" class="background-video">
                 <source src="https://course.oc-static.com/projects/D%C3%A9veloppeur+Web/DWP+IW_P9+Studio+d'animation/Studio+Koukaki-vide%CC%81o+header+sans+son+(1).mp4" type="video/mp4">"
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
             </video>
+            <!-- <h1 class="titre-site">Koukaki Studio</h1> -->
         </section>
-        
+
         <section id="story" class="story">
             <h2>L'histoire</h2>
             <article id="" class="story__article">
@@ -28,7 +29,7 @@ get_header();
             ?>
             <article id="characters">
                 <div class="main-character">
-                    <h3>Les personnages</h3>
+                    <h3><span>Les </span><span>personnages</span></h3>
                     <?php
                     $main_character = $characters_query->posts[0];
                     echo '<figure>';

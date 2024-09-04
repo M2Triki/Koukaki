@@ -37,45 +37,51 @@
     transform: rotate(360deg);
   }
 }
+@keyframes titreFlottant {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /***** MIXINS et VARIABLES *****/
-.story__article::after, .story h2::after, .site-footer::before, #studio h2::before {
-  animation-name: rotationFleurs;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.story h2::after {
-  height: 155px;
-}
-
-footer#colophon.site-footer::before {
-  height: 155px;
-}
-
-#studio h2::after {
-  height: 109px !important;
-}
-
-/*** Animations haut et bas ***/
+/***** Animations haut et bas *****/
 .banner {
   animation: animationHautLanding 1s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner img {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
-
+.banner titre-site {
+  animation: titreFlotant 1s ease-in-out forwards;
+}
 .story h2::before {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
 .story h2::after {
   animation: animationBasLanding 1s ease-in-out forwards;
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 155px;
 }
 .story__article::before {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
 .story__article::after {
   animation: animationBasLanding 1s ease-in-out forwards;
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .story #characters {
   animation: animationBasLanding 1s ease-in-out forwards;
@@ -91,6 +97,20 @@ footer#colophon.site-footer::before {
 #studio h2 {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
+#studio h2::before {
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 203px;
+}
+#studio h2::after {
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 109px;
+}
 #studio > div::before {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
@@ -98,7 +118,32 @@ footer#colophon.site-footer::before {
 .site-footer {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
+.site-footer::before {
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 155px;
+}
+.site-footer::after {
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
-/* .section-visible {
-   animation: animationBasLanding 1s ease-in-out forwards;
-} *//*# sourceMappingURL=style.css.map */
+.section-visible {
+  animation: animationBasLanding 1s ease-in-out forwards;
+}
+
+.story #characters h3 span {
+  color: blue;
+  position: relative;
+  top: 50px;
+}
+
+.story #characters.section-visible h3 span {
+  color: red;
+  top: 0;
+  transition: all 1s;
+}/*# sourceMappingURL=style.css.map */

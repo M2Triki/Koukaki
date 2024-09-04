@@ -16,7 +16,7 @@
   }); */
 
   
-  /* window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('.story #characters'); // Sélectionne toutes les sections à animer
   
     sections.forEach(section => {
@@ -27,6 +27,5 @@
         section.classList.add('section-visible'); // Ajoute la classe pour déclencher l'animation
       }
     });
-  }); */
-  
+  });  
   

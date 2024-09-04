@@ -40,39 +40,49 @@
     }
  }
 
+ @keyframes titreFlottant {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-20px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+ }
+
 /***** MIXINS et VARIABLES *****/
 @mixin no-animation {
    animation: none;
    transform: none;
 }
 
+@mixin rotationFleurs {
+   animation-name: rotationFleurs;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
 
 
- .story__article::after, .story h2::after, .site-footer::before, #studio h2::before {
-    animation-name: rotationFleurs;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
- }
-
- .story h2::after {
-    height: 155px;
- }
-
- footer#colophon.site-footer::before {
-    height: 155px;
- }
-
- #studio h2::after {
-    height: 109px!important;
- }
-
-/*** Animations haut et bas ***/
+/***** Animations haut et bas *****/
 .banner {
    animation: animationHautLanding 1s ease-in-out forwards;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 
    & img {
       animation: animationBasLanding 1s ease-in-out forwards;
+   }
+
+   & titre-site {
+      animation: titreFlotant 1s ease-in-out forwards;
+  }
+
+   & background-video {
+      
    }
 }
 
@@ -86,6 +96,8 @@
 
       &::after {
          animation: animationBasLanding 1s ease-in-out forwards;
+         @include rotationFleurs();
+         height: 155px;
       }
    }
 
@@ -96,6 +108,7 @@
 
       &::after {
          animation: animationBasLanding 1s ease-in-out forwards;
+         @include rotationFleurs();
       }
    }
 
@@ -115,18 +128,50 @@
 #studio {
    h2 {
       animation: animationBasLanding 1s ease-in-out forwards;
+
+      &::before {
+         @include rotationFleurs();
+         height: 203px;
+      }
+
+      &::after {
+         @include rotationFleurs();
+         height: 109px;
+      }
    }
 
    & > div::before {
       animation: animationBasLanding 1s ease-in-out forwards;
    }
+
 }
 
 .site-footer {
    animation: animationBasLanding 1s ease-in-out forwards;
+
+   &::before {
+      @include rotationFleurs();
+      height: 155px;
+   }
+
+   &::after {
+      @include rotationFleurs();
+   }
 }
 
-/* .section-visible {
+.section-visible {
    animation: animationBasLanding 1s ease-in-out forwards;
-} */
+}
+
+.story #characters h3 span {
+   color: blue;
+   position: relative;
+   top: 50px;
+}
+
+.story #characters.section-visible h3 span {
+   color: red;
+   top: 0;
+   transition: all 1s;
+}
  
