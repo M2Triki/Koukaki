@@ -12,7 +12,7 @@
  @keyframes animationBasLanding {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(100px);
     }
     100% {
         opacity: 1;
@@ -23,11 +23,11 @@
  @keyframes animationHautLanding {
     0% {
         opacity: 0;
-        transform: translateY(0px);
+        transform: translateY(-100px);
     }
     100% {
         opacity: 1;
-        transform: translateY(20px);
+        transform: translateY(0px);
     }
  }
 
@@ -39,6 +39,12 @@
         transform: rotate(360deg);
     }
  }
+
+/***** MIXINS et VARIABLES *****/
+@mixin no-animation {
+   animation: none;
+   transform: none;
+}
 
 
 
@@ -61,11 +67,63 @@
     height: 109px!important;
  }
 
-
- .banner {
+/*** Animations haut et bas ***/
+.banner {
+   animation: animationHautLanding 1s ease-in-out forwards;
 
    & img {
-      animation: animationBasLanding 1s ease-in-out;
+      animation: animationBasLanding 1s ease-in-out forwards;
    }
- }
+}
+
+.story {
+   h2 {
+      //animation: animationBasLanding 1s ease-in-out forwards;
+
+      &::before {
+         animation: animationBasLanding 1s ease-in-out forwards;
+      }
+
+      &::after {
+         animation: animationBasLanding 1s ease-in-out forwards;
+      }
+   }
+
+   &__article {
+      &::before {
+         animation: animationBasLanding 1s ease-in-out forwards;
+      }
+
+      &::after {
+         animation: animationBasLanding 1s ease-in-out forwards;
+      }
+   }
+
+   #characters {
+      animation: animationBasLanding 1s ease-in-out forwards;
+   }
+
+   #place {
+      animation: animationBasLanding 1s ease-in-out forwards;
+
+      & > div p {
+         @include no-animation;
+      }
+   }
+}
+
+#studio {
+   h2 {
+      animation: animationBasLanding 1s ease-in-out forwards;
+   }
+
+   & > div::before {
+      animation: animationBasLanding 1s ease-in-out forwards;
+   }
+}
+
+.site-footer {
+   animation: animationBasLanding 1s ease-in-out forwards;
+}
+
  
