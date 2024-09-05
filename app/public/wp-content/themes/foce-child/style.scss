@@ -42,13 +42,22 @@
 
  @keyframes titreFlottant {
    0% {
-      transform: translateY(0);
+      transform: translateY(0) rotate(0deg);
    }
-   50% {
-      transform: translateY(-20px);
+   33% {
+      transform: translateY(-10px) rotate(1deg);
+   }
+   66% {
+      transform: translate(10px) rotate(-1deg);
    }
    100% {
-      transform: translateY(0);
+      transform: translateY(0px) rotate(0deg);
+   }
+ }
+
+ @keyframes animationTitres {
+   0% {
+      transform: translateY();
    }
  }
 
@@ -75,15 +84,12 @@
 
    & img {
       animation: animationBasLanding 1s ease-in-out forwards;
+      animation: titreFlottant 3s ease-in-out infinite;
    }
 
    & titre-site {
       animation: titreFlotant 1s ease-in-out forwards;
   }
-
-   & background-video {
-      
-   }
 }
 
 .story {
@@ -159,21 +165,30 @@
    }
 }
 
-.section-visible {
-   animation: animationBasLanding 1s ease-in-out forwards;
-}
 
-.story #characters h3 span {
-   color: blue;
+span.titre {
    position: relative;
    top: 50px;
+   opacity: 0;
+   transition: all 0.5s ease-out;
 }
 
-.story #characters.section-visible h3 span {
-   color: red;
+span.titre.section-visible {
    top: 0;
-   transition: all 1s;
+   opacity: 1;
 }
+
+span.titre-animation2 {
+   transition-delay: 0.2s;
+}
+
+
+
+
+
+
+
+
 
 .background-video {
    position: absolute;

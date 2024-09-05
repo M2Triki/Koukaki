@@ -17,7 +17,7 @@
 
   
   window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.story #characters'); // Sélectionne toutes les sections à animer
+    const sections = document.querySelectorAll('.titre'); // Sélectionne toutes les sections à animer
   
     sections.forEach(section => {
       const sectionPosition = section.getBoundingClientRect().top; // Position de la section par rapport au viewport
