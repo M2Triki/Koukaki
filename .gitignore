@@ -1,0 +1,10 @@
+# Ignorer les fichiers de log
+logs/
+*.log
+
+# Ignorer les fichiers de style générés
+*.css.map
+*.css
+
+# Ignorer le fichier SQL local
+sql/local.sql

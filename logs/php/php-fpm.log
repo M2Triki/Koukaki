@@ -38,3 +38,19 @@
 [04-Sep-2024 11:21:21] ERROR: FPM initialization failed
 [04-Sep-2024 11:21:21] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
 [04-Sep-2024 11:21:21] ERROR: FPM initialization failed
+[05-Sep-2024 15:49:21] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[05-Sep-2024 15:49:21] ERROR: FPM initialization failed
+[05-Sep-2024 15:49:21] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[05-Sep-2024 15:49:21] ERROR: FPM initialization failed
+[05-Sep-2024 15:49:22] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[05-Sep-2024 15:49:22] ERROR: FPM initialization failed
+[05-Sep-2024 15:49:22] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[05-Sep-2024 15:49:22] ERROR: FPM initialization failed
+[06-Sep-2024 17:25:10] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[06-Sep-2024 17:25:10] ERROR: FPM initialization failed
+[06-Sep-2024 17:25:10] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[06-Sep-2024 17:25:10] ERROR: FPM initialization failed
+[06-Sep-2024 17:25:11] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[06-Sep-2024 17:25:11] ERROR: FPM initialization failed
+[06-Sep-2024 17:25:11] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[06-Sep-2024 17:25:11] ERROR: FPM initialization failed
