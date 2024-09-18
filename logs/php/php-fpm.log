@@ -54,3 +54,27 @@
 [06-Sep-2024 17:25:11] ERROR: FPM initialization failed
 [06-Sep-2024 17:25:11] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
 [06-Sep-2024 17:25:11] ERROR: FPM initialization failed
+[08-Sep-2024 11:40:57] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[08-Sep-2024 11:40:57] ERROR: FPM initialization failed
+[08-Sep-2024 11:40:57] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[08-Sep-2024 11:40:57] ERROR: FPM initialization failed
+[08-Sep-2024 11:40:58] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[08-Sep-2024 11:40:58] ERROR: FPM initialization failed
+[08-Sep-2024 11:40:59] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[08-Sep-2024 11:40:59] ERROR: FPM initialization failed
+[12-Sep-2024 16:39:56] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[12-Sep-2024 16:39:56] ERROR: FPM initialization failed
+[12-Sep-2024 16:39:57] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[12-Sep-2024 16:39:57] ERROR: FPM initialization failed
+[12-Sep-2024 16:39:58] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[12-Sep-2024 16:39:58] ERROR: FPM initialization failed
+[12-Sep-2024 16:39:58] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[12-Sep-2024 16:39:58] ERROR: FPM initialization failed
+[18-Sep-2024 19:40:06] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[18-Sep-2024 19:40:06] ERROR: FPM initialization failed
+[18-Sep-2024 19:40:07] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[18-Sep-2024 19:40:07] ERROR: FPM initialization failed
+[18-Sep-2024 19:40:07] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[18-Sep-2024 19:40:07] ERROR: FPM initialization failed
+[18-Sep-2024 19:40:08] ERROR: Another FPM instance seems to already listen on /Users/apollotriki/Library/Application Support/Local/run/k8wHXuVtM/php/php-fpm.socket
+[18-Sep-2024 19:40:08] ERROR: FPM initialization failed
