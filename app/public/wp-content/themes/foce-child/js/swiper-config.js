@@ -12,9 +12,5 @@ document.addEventListener('DOMContentLoaded', function() {
             slideShadows: true,
         },
         loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
     });
 });
