@@ -24,6 +24,9 @@ get_header();
                 <div>
                     <h3><span class="titre titre-animation1">Le </span><span class="titre titre-animation2">Lieu</span></h3>
                 </div>
+                <div class="container-nuages">
+                    <img src="./wp-content/uploads/2024/09/nuages.png" alt="Nuages">
+                </div>
 
             </article>
         </section>

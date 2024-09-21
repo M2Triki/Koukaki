@@ -103,6 +103,14 @@
   animation: none;
   transform: none;
 }
+.story #place container-nuages {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.story #place container-nuages img {
+  width: 200%;
+}
 
 #studio h2 {
   animation: animationBasLanding 1s ease-in-out forwards;
@@ -172,4 +180,10 @@ span.titre-animation2 {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+
+.container-nuages {
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
