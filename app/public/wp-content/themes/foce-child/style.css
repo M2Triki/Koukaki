@@ -158,6 +158,10 @@ span.titre-animation2 {
   transition-delay: 0.2s;
 }
 
+.swiper-slide {
+  width: 400px !important;
+}
+
 .background-video {
   position: absolute;
   top: 50%;
