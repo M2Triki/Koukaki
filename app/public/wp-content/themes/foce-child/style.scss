@@ -9,217 +9,206 @@
  */
 
 /***** KEYFRAMES Animations *****/
- @keyframes animationBasLanding {
-    0% {
-        opacity: 0;
-        transform: translateY(200px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
- }
+@keyframes animationBasLanding {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
- @keyframes animationHautLanding {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
- }
+@keyframes animationHautLanding {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
- @keyframes rotationFleurs {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
- }
+@keyframes rotationFleurs {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
- @keyframes titreFlottant {
-   0% {
-      transform: translateY(0) rotate(0deg);
-   }
-   33% {
-      transform: translateY(-10px) rotate(1deg);
-   }
-   66% {
-      transform: translate(10px) rotate(-1deg);
-   }
-   100% {
-      transform: translateY(0px) rotate(0deg);
-   }
- }
+@keyframes titreFlottant {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translate(10px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
 
- @keyframes animationTitres {
-   0% {
-      transform: translateY();
-   }
- }
+@keyframes animationTitres {
+  0% {
+    transform: translateY();
+  }
+}
 
 /***** MIXINS et VARIABLES *****/
 @mixin no-animation {
-   animation: none;
-   transform: none;
+  animation: none;
+  transform: none;
 }
 
 @mixin rotationFleurs {
-   animation-name: rotationFleurs;
-   animation-duration: 10s;
-   animation-iteration-count: infinite;
-   animation-timing-function: linear;
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
-
 
 /***** Animations haut et bas *****/
 .banner {
-   animation: animationHautLanding 1s ease-in-out forwards;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  animation: animationHautLanding 1s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-   & img {
-      animation: animationBasLanding 1s ease-in-out forwards;
-      animation: titreFlottant 3s ease-in-out infinite;
-   }
+  & img {
+    animation: animationBasLanding 1s ease-in-out forwards;
+    animation: titreFlottant 3s ease-in-out infinite;
+  }
 
-   & titre-site {
-      animation: titreFlotant 1s ease-in-out forwards;
+  & titre-site {
+    animation: titreFlotant 1s ease-in-out forwards;
   }
 }
 
 .story {
-   h2 {
-      //animation: animationBasLanding 1s ease-in-out forwards;
+  h2 {
+    //animation: animationBasLanding 1s ease-in-out forwards;
 
-      &::before {
-         animation: animationBasLanding 1s ease-in-out forwards;
-      }
-
-      &::after {
-         animation: animationBasLanding 1s ease-in-out forwards;
-         @include rotationFleurs();
-         height: 155px;
-      }
-   }
-
-   &__article {
-      &::before {
-         animation: animationBasLanding 1s ease-in-out forwards;
-      }
-
-      &::after {
-         animation: animationBasLanding 1s ease-in-out forwards;
-         @include rotationFleurs();
-      }
-   }
-
-   #characters {
+    &::before {
       animation: animationBasLanding 1s ease-in-out forwards;
-   }
+    }
 
-   #place {
+    &::after {
       animation: animationBasLanding 1s ease-in-out forwards;
-      
-      & > div p {
-         @include no-animation;
-      }
+      @include rotationFleurs();
+      height: 155px;
+    }
+  }
 
-      & container-nuages {
-         position: absolute;
-         top: 0;
-         right: 0;
+  &__article {
+    &::before {
+      animation: animationBasLanding 1s ease-in-out forwards;
+    }
 
-         & img {
-            width: 200%;
-         }
+    &::after {
+      animation: animationBasLanding 1s ease-in-out forwards;
+      @include rotationFleurs();
+    }
+  }
+
+  #characters {
+    animation: animationBasLanding 1s ease-in-out forwards;
+  }
+
+  #place {
+    animation: animationBasLanding 1s ease-in-out forwards;
+    position: relative;
+    z-index: -1;
+
+    & > div p {
+      @include no-animation;
+    }
+
+    & container-nuages {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      & img {
+        width: 200%;
       }
-   }
+    }
+  }
 }
 
 #studio {
-   h2 {
-      animation: animationBasLanding 1s ease-in-out forwards;
+  h2 {
+    animation: animationBasLanding 1s ease-in-out forwards;
 
-      &::before {
-         @include rotationFleurs();
-         height: 203px;
-      }
+    &::before {
+      @include rotationFleurs();
+      height: 203px;
+    }
 
-      &::after {
-         @include rotationFleurs();
-         height: 109px;
-      }
-   }
+    &::after {
+      @include rotationFleurs();
+      height: 109px;
+    }
+  }
 
-   & > div::before {
-      animation: animationBasLanding 1s ease-in-out forwards;
-   }
-
+  & > div::before {
+    animation: animationBasLanding 1s ease-in-out forwards;
+  }
 }
 
 .site-footer {
-   animation: animationBasLanding 1s ease-in-out forwards;
+  animation: animationBasLanding 1s ease-in-out forwards;
 
-   &::before {
-      @include rotationFleurs();
-      height: 155px;
-   }
+  &::before {
+    @include rotationFleurs();
+    height: 155px;
+  }
 
-   &::after {
-      @include rotationFleurs();
-   }
+  &::after {
+    @include rotationFleurs();
+  }
 }
 
-
 span.titre {
-   position: relative;
-   top: 50px;
-   opacity: 0;
-   transition: all 0.5s ease-out;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
 }
 
 span.titre.section-visible {
-   top: 0;
-   opacity: 1;
+  top: 0;
+  opacity: 1;
 }
 
 span.titre-animation2 {
-   transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
-
 
 .swiper-slide {
-   width: 400px !important;
+  width: 400px !important;
 }
-
-
-
-
-
 
 .background-video {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   min-width: 100%;
-   min-height: 100%;
-   transform: translate(-50%, -50%);
-   object-fit: cover;
-   z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
 }
-
-
-
 
 .container-nuages {
-   position: absolute;
-   top: 0;
-   right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
 }
-
- 

@@ -98,6 +98,8 @@
 }
 .story #place {
   animation: animationBasLanding 1s ease-in-out forwards;
+  position: relative;
+  z-index: -1;
 }
 .story #place > div p {
   animation: none;
@@ -186,4 +188,5 @@ span.titre-animation2 {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */
