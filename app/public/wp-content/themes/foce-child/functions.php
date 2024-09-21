@@ -24,3 +24,9 @@ function enqueue_swiper_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_swiper_scripts');
 
+
+function enqueue_skrollr_script() {
+    wp_enqueue_script('skrollr', 'https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js', array(), '0.6.30', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_skrollr_script');
+

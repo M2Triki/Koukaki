@@ -124,7 +124,7 @@
 
    #place {
       animation: animationBasLanding 1s ease-in-out forwards;
-
+      
       & > div p {
          @include no-animation;
       }

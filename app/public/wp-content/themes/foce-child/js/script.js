@@ -1,22 +1,4 @@
-/* window.addEventListener('scroll', function() {
-    const imageLogo = document.querySelector('.banner img');
-    const banner = document.querySelector('.banner');
-  
-    const bannerHeight = banner.offsetHeight;
-    const scrollPosition = window.scrollY;
-    
-    const stopPosition = bannerHeight - imageLogo.offsetHeight;
-  
-    if (scrollPosition < stopPosition) {
-      imageLogo.style.transform = `translateY(${scrollPosition}px)`;
-    } 
-    else {
-      imageLogo.style.transform = `translateY(${stopPosition}px)`;
-    }
-  }); */
-
-  
-  window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('.titre'); // Sélectionne toutes les sections à animer
   
     sections.forEach(section => {
@@ -28,4 +10,7 @@
       }
     });
   });  
-  
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var s = skrollr.init();
+});  
