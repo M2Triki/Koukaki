@@ -59,6 +59,21 @@
 /***** MIXINS et VARIABLES *****/
 /***** HEADER *****/
 /***** Animations haut et bas *****/
+span.titre {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+span.titre.section-visible {
+  top: 0;
+  opacity: 1;
+}
+span.titre-animation2 {
+  transition-delay: 0.2s;
+}
+
+/***** CONTENU *****/
 .banner {
   animation: animationHautLanding 1s ease-in-out forwards;
   display: flex;
@@ -66,8 +81,13 @@
   align-items: center;
 }
 .banner img {
-  animation: animationBasLanding 1s ease-in-out forwards;
+  animation: animationBasLanding 2s 300ms both, float 6s 2s infinite ease-in-out;
   animation: titreFlottant 3s ease-in-out infinite;
+  position: sticky;
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+  opacity: 1;
 }
 .banner titre-site {
   animation: titreFlotant 1s ease-in-out forwards;
@@ -136,22 +156,6 @@
   animation: animationBasLanding 1s ease-in-out forwards;
 }
 
-span.titre {
-  position: relative;
-  top: 50px;
-  opacity: 0;
-  transition: all 0.5s ease-out;
-}
-
-span.titre.section-visible {
-  top: 0;
-  opacity: 1;
-}
-
-span.titre-animation2 {
-  transition-delay: 0.2s;
-}
-
 .swiper-slide {
   width: 400px !important;
 }
@@ -201,7 +205,6 @@ span.titre-animation2 {
 .oscars img {
   height: 100%;
 }
-
 .oscars::before {
   content: url("./assets/images/Sunflower.png");
   animation-name: rotationFleurs;
@@ -212,7 +215,6 @@ span.titre-animation2 {
   left: 4em;
   top: 0em;
 }
-
 .oscars::after {
   content: url("./assets/images/orchid.png");
   animation-name: rotationFleurs;
@@ -222,10 +224,6 @@ span.titre-animation2 {
   position: absolute;
   right: -4em;
   top: -3em;
-}
-
-#place h3 {
-  width: 60%;
 }
 
 /***** FOOTER *****/
