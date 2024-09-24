@@ -11,7 +11,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  var s = skrollr.init();
-});

@@ -231,10 +231,9 @@ span.titre-animation2 {
   }
 }
 
-/* ---- AJOUT 6 ----  */
-/* Suppression des fleurs du pieds de page pour le déplacer dans la nouvelle section- */
 .oscars::before {
   content: url("./assets/images/Sunflower.png");
+  @include rotationFleurs();
   position: absolute;
   left: 4em;
   top: 0em;
@@ -242,26 +241,33 @@ span.titre-animation2 {
 
 .oscars::after {
   content: url("./assets/images/orchid.png");
+  @include rotationFleurs();
   position: absolute;
   right: -4em;
   top: -3em;
-}
-
-.site-footer::before {
-  content: "";
-}
-
-.site-footer::after {
-  content: "";
 }
 
 #place h3 {
   width: 60%;
 }
 
-/*  **********************************  */
-/*    Media query : max-width: 1192px    */
-/*  **********************************  */
+/***** FOOTER *****/
+.site-footer {
+  animation: animationBasLanding 1s ease-in-out forwards;
+
+  &::before {
+    content: ""; // Cela permet de supprimer ces fleurs pour l'ajouter section Oscars
+  }
+  &::after {
+    content: ""; // Cela permet de supprimer ces fleurs pour l'ajouter section Oscars
+  }
+
+  & ul::after {
+    @include rotationFleurs();
+  }
+}
+
+/***** Media QUERIES *****/
 @media all and (max-width: 1192px) {
   .oscars h3 {
     font-size: 2.8rem;
@@ -269,9 +275,6 @@ span.titre-animation2 {
   }
 }
 
-/*  **********************************  */
-/*    Media query : max-width: 920px    */
-/*  **********************************  */
 @media all and (max-width: 920px) {
   h2 {
     font-size: 3.3rem;
@@ -307,9 +310,6 @@ span.titre-animation2 {
   }
 }
 
-/*  **********************************  */
-/*    Media query : max-width: 700px    */
-/*  **********************************  */
 @media all and (max-width: 700px) {
   h2 {
     font-size: 3rem;
@@ -326,9 +326,6 @@ span.titre-animation2 {
   }
 }
 
-/*  **********************************  */
-/*    Media query : max-width: 480px    */
-/*  **********************************  */
 @media all and (max-width: 480px) {
   h2 {
     font-size: 2.4rem;
@@ -354,19 +351,5 @@ span.titre-animation2 {
 
   .oscars__logo {
     max-width: 70%;
-  }
-}
-
-/***** FOOTER *****/
-.site-footer {
-  animation: animationBasLanding 1s ease-in-out forwards;
-
-  &ul::before {
-    @include rotationFleurs();
-    height: 155px;
-  }
-
-  & ul::after {
-    @include rotationFleurs();
   }
 }

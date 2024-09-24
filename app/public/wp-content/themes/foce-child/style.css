@@ -202,10 +202,12 @@ span.titre-animation2 {
   height: 100%;
 }
 
-/* ---- AJOUT 6 ----  */
-/* Suppression des fleurs du pieds de page pour le déplacer dans la nouvelle section- */
 .oscars::before {
   content: url("./assets/images/Sunflower.png");
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   position: absolute;
   left: 4em;
   top: 0em;
@@ -213,35 +215,43 @@ span.titre-animation2 {
 
 .oscars::after {
   content: url("./assets/images/orchid.png");
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
   position: absolute;
   right: -4em;
   top: -3em;
-}
-
-.site-footer::before {
-  content: "";
-}
-
-.site-footer::after {
-  content: "";
 }
 
 #place h3 {
   width: 60%;
 }
 
-/*  **********************************  */
-/*    Media query : max-width: 1192px    */
-/*  **********************************  */
+/***** FOOTER *****/
+.site-footer {
+  animation: animationBasLanding 1s ease-in-out forwards;
+}
+.site-footer::before {
+  content: "";
+}
+.site-footer::after {
+  content: "";
+}
+.site-footer ul::after {
+  animation-name: rotationFleurs;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/***** Media QUERIES *****/
 @media all and (max-width: 1192px) {
   .oscars h3 {
     font-size: 2.8rem;
     line-height: 3rem;
   }
 }
-/*  **********************************  */
-/*    Media query : max-width: 920px    */
-/*  **********************************  */
 @media all and (max-width: 920px) {
   h2 {
     font-size: 3.3rem;
@@ -270,9 +280,6 @@ span.titre-animation2 {
     content: "";
   }
 }
-/*  **********************************  */
-/*    Media query : max-width: 700px    */
-/*  **********************************  */
 @media all and (max-width: 700px) {
   h2 {
     font-size: 3rem;
@@ -286,9 +293,6 @@ span.titre-animation2 {
     top: 100px;
   }
 }
-/*  **********************************  */
-/*    Media query : max-width: 480px    */
-/*  **********************************  */
 @media all and (max-width: 480px) {
   h2 {
     font-size: 2.4rem;
@@ -310,21 +314,4 @@ span.titre-animation2 {
   .oscars__logo {
     max-width: 70%;
   }
-}
-/***** FOOTER *****/
-.site-footer {
-  animation: animationBasLanding 1s ease-in-out forwards;
-}
-.site-footerul::before {
-  animation-name: rotationFleurs;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  height: 155px;
-}
-.site-footer ul::after {
-  animation-name: rotationFleurs;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }/*# sourceMappingURL=style.css.map */
