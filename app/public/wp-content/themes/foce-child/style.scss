@@ -74,6 +74,8 @@
   animation-timing-function: linear;
 }
 
+/***** HEADER *****/
+
 /***** Animations haut et bas *****/
 .banner {
   animation: animationHautLanding 1s ease-in-out forwards;
@@ -162,19 +164,6 @@
   }
 }
 
-.site-footer {
-  animation: animationBasLanding 1s ease-in-out forwards;
-
-  &::before {
-    @include rotationFleurs();
-    height: 155px;
-  }
-
-  &::after {
-    @include rotationFleurs();
-  }
-}
-
 span.titre {
   position: relative;
   top: 50px;
@@ -213,95 +202,171 @@ span.titre-animation2 {
   z-index: 2;
 }
 
-/***** Section OSCARS *****/
-.section-oscars {
+/***** OSCARS *****/
+.oscars {
+  position: relative;
+  padding: 150px 0 50px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px 0;
   justify-content: center;
-  margin-top: 50px;
+  align-items: center;
 
-  margin: 0 auto; /* Ajusta el margen para centrar horizontalmente */
-  & h3 {
-    background-image: url("../assets/images/backgroundh3.png");
-    background-size: 100%;
-    text-align: left;
-    padding: 100px 84px;
+  &__title {
+    position: relative;
+
+    & img {
+      height: 100%;
+    }
+    & h3 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 3.2rem;
+      text-align: left;
+    }
   }
-
   & img {
-    margin-top: 100px;
-    height: 129px;
+    height: 100%;
   }
 }
 
-@media screen and (max-width: 870px) {
-  .section-oscars {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section-oscars img {
-    width: 278px;
-    margin-top: 0px;
-  }
-
-  .section-oscars h3 {
-    font-size: 2em;
-  }
-}
-.section-oscars::before {
-  content: url(../assets/images/Sunflower.png);
+/* ---- AJOUT 6 ----  */
+/* Suppression des fleurs du pieds de page pour le déplacer dans la nouvelle section- */
+.oscars::before {
+  content: url("./assets/images/Sunflower.png");
   position: absolute;
-  left: 10em;
+  left: 4em;
+  top: 0em;
+}
+
+.oscars::after {
+  content: url("./assets/images/orchid.png");
+  position: absolute;
+  right: -4em;
   top: -3em;
 }
 
-.section-oscars::after {
-  content: url(../assets/images/orchid.png);
-  position: absolute;
-  right: -5em;
-  bottom: 22em;
-  overflow: hidden;
+.site-footer::before {
+  content: "";
 }
 
-.site-footer::before,
 .site-footer::after {
-  display: none;
+  content: "";
 }
 
-@media screen and (min-width: 870px) and (max-width: 1000px) {
-  .section-oscars h3 {
-    font-size: 2em;
+#place h3 {
+  width: 60%;
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 1192px    */
+/*  **********************************  */
+@media all and (max-width: 1192px) {
+  .oscars h3 {
+    font-size: 2.8rem;
+    line-height: 3rem;
   }
 }
-/*----fin section-oscars------*/
 
-/* Pour faire flotter les éléments */
-@keyframes float {
-  0% {
-    transform: translate3d(6px, 6px, 0);
+/*  **********************************  */
+/*    Media query : max-width: 920px    */
+/*  **********************************  */
+@media all and (max-width: 920px) {
+  h2 {
+    font-size: 3.3rem;
   }
-  12% {
-    transform: translate3d(0px, 6px, 0);
+
+  .story > h2 span,
+  .studio > h2 span {
+    width: 100%;
   }
-  24% {
-    transform: translate3d(6px, -4px, 0);
+
+  .story #characters {
+    margin-top: 10px !important;
   }
-  36% {
-    transform: translate3d(6px, 0px, 0);
+
+  #characters > h3,
+  #place h3 {
+    width: 100%;
   }
-  48% {
-    transform: translate3d(-4px, -6px, 0);
+
+  #oscars {
+    padding-top: 20px;
   }
-  60% {
-    transform: translate3d(0px, -4px, 0);
+
+  .oscars h3 {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
   }
-  72% {
-    transform: translate3d(-8px, 6px, 0);
+
+  #studio h2::before,
+  .oscars::before,
+  .oscars::after {
+    content: "";
   }
-  84% {
-    transform: translate3d(-4px, 0px, 0);
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 700px    */
+/*  **********************************  */
+@media all and (max-width: 700px) {
+  h2 {
+    font-size: 3rem;
   }
-  100% {
-    transform: translate3d(6px, 6px, 0);
+
+  .oscars h3 {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+  }
+
+  #characters span,
+  #place span {
+    top: 100px;
+  }
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 480px    */
+/*  **********************************  */
+@media all and (max-width: 480px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  #characters span,
+  #place span {
+    top: 100px;
+  }
+
+  .oscars__title {
+    height: 200px;
+  }
+
+  .oscars h3 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .oscars__logo {
+    max-width: 70%;
+  }
+}
+
+/***** FOOTER *****/
+.site-footer {
+  animation: animationBasLanding 1s ease-in-out forwards;
+
+  &ul::before {
+    @include rotationFleurs();
+    height: 155px;
+  }
+
+  & ul::after {
+    @include rotationFleurs();
   }
 }
