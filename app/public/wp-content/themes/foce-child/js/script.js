@@ -1,5 +1,5 @@
 var s = skrollr.init({
-  forceHeight: false, // Empêche Skrollr d'ajouter une hauteur supplémentaire
+  forceHeight: false, // Effacer la bande blanche en bas du front page
 });
 
 // Animation des titres lors du scroll
