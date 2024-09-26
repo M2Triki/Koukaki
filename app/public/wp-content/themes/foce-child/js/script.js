@@ -1,3 +1,5 @@
+var s = skrollr.init();
+
 // Animation des titres lors du scroll
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll(".titre"); // Sélectionne toutes les sections à animer

@@ -84,9 +84,7 @@ span.titre-animation2 {
   animation: animationBasLanding 2s 300ms both, float 6s 2s infinite ease-in-out;
   animation: titreFlottant 3s ease-in-out infinite;
   position: sticky;
-  position: sticky;
   top: 80px;
-  z-index: 10;
   opacity: 1;
 }
 .banner titre-site {
@@ -128,8 +126,8 @@ span.titre-animation2 {
 }
 .story #place container-nuages {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50px;
+  right: 50px;
 }
 .story #place container-nuages img {
   width: 200%;
