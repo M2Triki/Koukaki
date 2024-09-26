@@ -1,4 +1,6 @@
-var s = skrollr.init();
+var s = skrollr.init({
+  forceHeight: false, // Empêche Skrollr d'ajouter une hauteur supplémentaire
+});
 
 // Animation des titres lors du scroll
 window.addEventListener("scroll", () => {

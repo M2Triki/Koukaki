@@ -124,12 +124,7 @@ span.titre-animation2 {
   animation: none;
   transform: none;
 }
-.story #place container-nuages {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-}
-.story #place container-nuages img {
+.story #place img {
   width: 200%;
 }
 
@@ -172,9 +167,8 @@ span.titre-animation2 {
 
 .container-nuages {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
+  top: 50px;
+  right: 50px;
 }
 
 /***** OSCARS *****/

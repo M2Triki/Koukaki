@@ -153,14 +153,8 @@ span.titre {
       @include no-animation;
     }
 
-    & container-nuages {
-      position: absolute;
-      top: 50px;
-      right: 50px;
-
-      & img {
-        width: 200%;
-      }
+    & img {
+      width: 200%;
     }
   }
 }
@@ -202,9 +196,8 @@ span.titre {
 
 .container-nuages {
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
+  top: 50px;
+  right: 50px;
 }
 
 /***** OSCARS *****/
