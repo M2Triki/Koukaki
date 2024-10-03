@@ -43,7 +43,7 @@
             <ul>
                 <li class="burger-menu-story flower cat"><a href="#story">Histoire</a></li>
                 <li class="burger-menu-character flower cat"><a href="#characters">Personnages</a></li>
-                <li class="burger-menu-studio flower cat"><a href="#lieu">Lieu</a></li>
+                <li class="burger-menu-place flower cat"><a href="#lieu">Lieu</a></li>
                 <li class="burger-menu-studio flower cat"><a href="#studio">Studio Koukaki</a></li>
             </ul>
                 <div class="burger-menu-footer burger-open-click flower cat">

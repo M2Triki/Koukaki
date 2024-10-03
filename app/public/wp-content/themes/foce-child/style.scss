@@ -116,6 +116,10 @@
     &-footer {
       &::after {
         @include rotationFleurs();
+        content: url("./assets/images/hibiscus_footer.png");
+        position: absolute;
+        left: 500px;
+        bottom: -23.5em;
       }
     }
     &.active {
@@ -128,7 +132,7 @@
       & > a {
         color: #000000;
         font-weight: bold;
-        margin-top: 4rem;
+        margin-top: 3rem;
 
         &:hover {
           filter: drop-shadow(0px 0px 5px #ff5c00);
@@ -163,8 +167,6 @@
   left: -4em;
   top: 3em;
   transform: scale(0.9);
-  animation: fleur var(--rotate) linear infinite;
-  -webkit-animation: fleur var(--rotate) linear infinite;
 }
 
 .burger-menu-story::after {
@@ -172,7 +174,7 @@
   position: absolute;
   right: 19rem;
   bottom: 0em;
-  @include titreFlottant();
+  @include rotationFleurs();
 }
 .burger-menu-story::before {
   content: url("./assets/images/catBlue.png");
@@ -180,14 +182,14 @@
   right: 70em;
   bottom: -3em;
   margin-top: 3rem;
-  @include titreFlottant();
+  animation: titreFlottant 3s ease-in-out infinite;
 }
 .burger-menu-place::after {
   content: url("./assets/images/flower.png");
+  @include rotationFleurs();
   position: absolute;
   right: 80em;
   top: -1em;
-  transform: scale(0.5);
 }
 
 .burger-menu-character::after {
@@ -196,33 +198,23 @@
   position: absolute;
   left: 95em;
   top: -2em;
-  transform-origin: center;
-}
-
-.burger-menu-footer::after {
-  content: url("./assets/images/hibiscus_footer.png");
-  position: absolute;
-  left: 500px;
-  bottom: -23.5em;
-  animation: fleur var(--rotate) linear infinite;
-  -webkit-animation: fleur var(--rotate) linear infinite;
 }
 
 .burger-menu-footer::before {
   content: url("./assets/images/catYellow.png");
+  animation: titreFlottant 3s ease-in-out infinite;
   position: absolute;
   right: 30em;
   bottom: 0;
-  animation: float 5s 300ms infinite ease-in-out;
 }
 
 .burger-menu-place::before {
   content: url("./assets/images/catBlack.png");
+  animation: titreFlottant 3s ease-in-out infinite;
   position: absolute;
   left: -20em;
-  top: -4em;
+  top: 2em;
   right: -80rem;
-  animation: float 6s 200ms infinite ease-in-out;
 }
 
 .closeCross {
@@ -324,11 +316,6 @@
   display: block;
   width: 100%;
   margin: 0;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   .burger-close-modal.close .line:nth-child(2) {
     opacity: 0;
   }
