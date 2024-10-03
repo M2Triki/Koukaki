@@ -141,27 +141,26 @@
   position: absolute;
   left: -4em;
   top: 3em;
-  transform: scale(0.9);
 }
 
 .burger-menu-story::after {
   content: url("./assets/images/Sunflower.png");
-  position: absolute;
-  right: 19rem;
-  bottom: 0em;
   animation-name: rotationFleurs;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  position: absolute;
+  right: 19rem;
+  bottom: 0em;
 }
 
 .burger-menu-story::before {
   content: url("./assets/images/catBlue.png");
+  animation: titreFlottant 3s ease-in-out infinite;
   position: absolute;
   right: 70em;
   bottom: -3em;
   margin-top: 3rem;
-  animation: titreFlottant 3s ease-in-out infinite;
 }
 
 .burger-menu-place::after {
@@ -256,7 +255,7 @@
 /*** Liste en dedans de la burger ***/
 .burger-menu ul {
   position: relative;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -577,6 +576,13 @@ span.titre-animation2 {
   }
 }
 @media all and (max-width: 700px) {
+  /***** Banner *****/
+  .background-video {
+    display: none;
+  }
+  .banner {
+    min-height: 500px;
+  }
   h2 {
     font-size: 3rem;
   }
@@ -606,8 +612,5 @@ span.titre-animation2 {
   .oscars h3 {
     font-size: 1.4rem;
     line-height: 1.6rem;
-  }
-  .oscars__logo {
-    max-width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */
