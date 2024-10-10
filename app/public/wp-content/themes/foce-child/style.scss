@@ -133,6 +133,9 @@
         color: #000000;
         font-weight: bold;
         margin-top: 3rem;
+        @media screen and (max-width: 920px) {
+          font-size: 24px;
+        }
 
         &:hover {
           filter: drop-shadow(0px 0px 5px #ff5c00);
@@ -174,6 +177,9 @@
   position: absolute;
   right: 19rem;
   bottom: 0em;
+  @media screen and (max-width: 920px) {
+    display: none;
+  }
 }
 .burger-menu-story::before {
   content: url("./assets/images/catBlue.png");
@@ -448,6 +454,13 @@ span.titre {
 
   #characters {
     animation: animationBasLanding 1s ease-in-out forwards;
+    & h3 {
+      max-width: 1400px;
+      text-align: left;
+      margin: auto;
+      padding: 1em;
+      background-position: left;
+    }
   }
 
   #place {
@@ -487,6 +500,10 @@ span.titre {
 
 .swiper-slide {
   width: 400px !important;
+}
+
+.swiper-container {
+  width: 100%;
 }
 
 .background-video {
@@ -585,6 +602,8 @@ span.titre {
 
   .story #characters {
     margin-top: 10px !important;
+    flex-direction: column;
+    width: 100%;
   }
 
   #characters > h3,
@@ -626,11 +645,6 @@ span.titre {
     font-size: 1.9rem;
     line-height: 2.5rem;
   }
-
-  #characters span,
-  #place span {
-    top: 100px;
-  }
 }
 
 @media all and (max-width: 480px) {
@@ -642,10 +656,10 @@ span.titre {
     font-size: 2rem;
   }
 
-  #characters span,
-  #place span {
-    top: 100px;
-  }
+  // #characters span,
+  // #place span {
+  //   top: 100px;
+  // }
 
   .oscars__title {
     height: 200px;

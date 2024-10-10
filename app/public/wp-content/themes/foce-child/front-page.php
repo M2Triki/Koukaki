@@ -23,6 +23,7 @@ get_header();
             <article id="place">
                 <div>
                     <h3><span class="titre titre-animation1">Le </span><span class="titre titre-animation2">Lieu</span></h3>
+                    <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
                 <div class="container-nuages" data-top="transform:translateX(-300px);" data-bottom="transform:translateX(0px);">
                     <img src="../wp-content/uploads/2024/09/nuages.png" alt="Nuages">

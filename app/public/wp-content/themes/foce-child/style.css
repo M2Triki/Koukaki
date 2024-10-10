@@ -109,6 +109,11 @@
   font-weight: bold;
   margin-top: 3rem;
 }
+@media screen and (max-width: 920px) {
+  .burger .burger-menu li > a {
+    font-size: 24px;
+  }
+}
 .burger .burger-menu li > a:hover {
   filter: drop-shadow(0px 0px 5px #ff5c00);
   -webkit-filter: drop-shadow(0px 0px 5px #ff5c00);
@@ -152,6 +157,11 @@
   position: absolute;
   right: 19rem;
   bottom: 0em;
+}
+@media screen and (max-width: 920px) {
+  .burger-menu-story::after {
+    display: none;
+  }
 }
 
 .burger-menu-story::before {
@@ -420,6 +430,13 @@ span.titre-animation2 {
 .story #characters {
   animation: animationBasLanding 1s ease-in-out forwards;
 }
+.story #characters h3 {
+  max-width: 1400px;
+  text-align: left;
+  margin: auto;
+  padding: 1em;
+  background-position: left;
+}
 .story #place {
   animation: animationBasLanding 1s ease-in-out forwards;
   position: relative;
@@ -456,6 +473,10 @@ span.titre-animation2 {
 
 .swiper-slide {
   width: 400px !important;
+}
+
+.swiper-container {
+  width: 100%;
 }
 
 .background-video {
@@ -557,6 +578,8 @@ span.titre-animation2 {
   }
   .story #characters {
     margin-top: 10px !important;
+    flex-direction: column;
+    width: 100%;
   }
   #characters > h3,
   #place h3 {
@@ -590,10 +613,6 @@ span.titre-animation2 {
     font-size: 1.9rem;
     line-height: 2.5rem;
   }
-  #characters span,
-  #place span {
-    top: 100px;
-  }
 }
 @media all and (max-width: 480px) {
   h2 {
@@ -601,10 +620,6 @@ span.titre-animation2 {
   }
   h3 {
     font-size: 2rem;
-  }
-  #characters span,
-  #place span {
-    top: 100px;
   }
   .oscars__title {
     height: 200px;

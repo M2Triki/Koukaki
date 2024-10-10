@@ -10,6 +10,7 @@ $characters_query = new WP_Query($args);
 
 <article id="characters">
     <div class="swiper-container">
+        <h3><span class="titre titre-animation1">Les</span> <span class="titre titre-animation2"> personnages</span></h3>
         <div class="swiper-wrapper">
             <?php
             while ($characters_query->have_posts()) {
