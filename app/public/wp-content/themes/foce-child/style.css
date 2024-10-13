@@ -37,11 +37,6 @@
     transform: rotate(360deg);
   }
 }
-@keyframes animationTitres {
-  0% {
-    transform: translateY();
-  }
-}
 /***** MIXINS et VARIABLES *****/
 /***** MENU *****/
 /*** Style pour burger ***/
@@ -313,33 +308,6 @@
   opacity: 0;
 }
 
-.burger-close-modal.close .line:first-child {
-  transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -webkit-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -moz-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -ms-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -o-transform: rotate(45deg) translate3d(8px, 6px, 0);
-}
-.burger-close-modal.close .line:first-child .burger-close-modal.close span.line:last-child {
-  transform: rotate(-45deg) translate3d(8px, -6px, 0);
-  -webkit-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-  -moz-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-  -ms-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-  -o-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-}
-.burger-close-modal.close .line:first-child .burger-menu .line {
-  height: 2px;
-  background-color: #000;
-  display: block;
-  width: 100%;
-  margin: 0;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-}
-
 /*** Media QUERIES ***/
 @media screen and (min-width: 620px) and (max-width: 900px) {
   .main-navigation {
@@ -396,7 +364,6 @@ span.titre-animation2 {
   align-items: center;
 }
 .banner img {
-  animation: animationBasLanding 2s 300ms both, float 6s 2s infinite ease-in-out;
   animation: titreFlottant 3s ease-in-out infinite;
   position: sticky;
   top: 80px;
@@ -474,7 +441,6 @@ span.titre-animation2 {
 .swiper-slide {
   width: 400px !important;
 }
-
 .swiper-container {
   width: 100%;
 }

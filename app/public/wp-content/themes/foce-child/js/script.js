@@ -55,7 +55,7 @@ window.addEventListener("scroll", () => {
 
   sections.forEach((section) => {
     const sectionPosition = section.getBoundingClientRect().top; // Position de la section par rapport au viewport
-    const screenPosition = window.innerHeight / 1.3; // Ajuste la distance de déclenchement si nécessaire
+    const screenPosition = window.innerHeight / 1.3; // Ajuste la distance de déclenchement
 
     if (sectionPosition < screenPosition) {
       section.classList.add("section-visible"); // Ajoute la classe pour déclencher l'animation

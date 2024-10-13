@@ -26,7 +26,7 @@ get_header();
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
                 <div class="container-nuages" data-top="transform:translateX(-300px);" data-bottom="transform:translateX(0px);">
-                    <img src="../wp-content/uploads/2024/09/nuages.png" alt="Nuages">
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/nuages.png'; ?>" alt="Nuages">
                 </div>
             </article>
 

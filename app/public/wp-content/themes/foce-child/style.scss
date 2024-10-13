@@ -56,12 +56,6 @@
   }
 }
 
-@keyframes animationTitres {
-  0% {
-    transform: translateY();
-  }
-}
-
 /***** MIXINS et VARIABLES *****/
 @mixin no-animation {
   animation: none;
@@ -326,33 +320,6 @@
   }
 }
 
-.burger-close-modal.close .line:first-child {
-  transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -webkit-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -moz-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -ms-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  -o-transform: rotate(45deg) translate3d(8px, 6px, 0);
-  .burger-close-modal.close span.line:last-child {
-    transform: rotate(-45deg) translate3d(8px, -6px, 0);
-    -webkit-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-    -moz-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-    -ms-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-    -o-transform: rotate(-45deg) translate3d(8px, -6px, 0);
-  }
-  .burger-menu .line {
-    height: 2px;
-    background-color: #000;
-    display: block;
-    width: 100%;
-    margin: 0;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-  }
-}
-
 /*** Media QUERIES ***/
 @media screen and (min-width: 620px) and (max-width: 900px) {
   .main-navigation {
@@ -412,12 +379,9 @@ span.titre {
   align-items: center;
 
   & img {
-    animation: animationBasLanding 2s 300ms both,
-      float 6s 2s infinite ease-in-out;
     animation: titreFlottant 3s ease-in-out infinite;
     position: sticky;
     top: 80px;
-    // z-index: 2;
     opacity: 1;
   }
 
@@ -428,8 +392,6 @@ span.titre {
 
 .story {
   h2 {
-    //animation: animationBasLanding 1s ease-in-out forwards;
-
     &::before {
       animation: animationBasLanding 1s ease-in-out forwards;
     }
@@ -498,12 +460,13 @@ span.titre {
   }
 }
 
-.swiper-slide {
-  width: 400px !important;
-}
-
-.swiper-container {
-  width: 100%;
+.swiper {
+  &-slide {
+    width: 400px !important;
+  }
+  &-container {
+    width: 100%;
+  }
 }
 
 .background-video {
